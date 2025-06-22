@@ -1,0 +1,11 @@
+@model FaultTracker.Models.Fault
+<h2>Adding New Fault</h2>
+<form asp-action="Create" method="post">
+    <label>Title:</label><br />
+    <input asp-for="Title" /><br /><br />
+
+    <label>Description:</label><br />
+    <textarea asp-for="Description" /></textarea><br /><br />
+
+    <input type="submit" value="send" />
+</form>

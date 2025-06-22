@@ -1,0 +1,28 @@
+@model List<FaultTracker.Models.Fault>
+    <h2>Faults List</h2>
+    <a href="/Faults/Create">Add New Fault</a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var fault in Model)
+            {
+                <tr>
+                    <th>@fault.Id</th>
+                    <th>@fault.Title</th>
+                    <th>@fault.Description</th>
+                    <th>@fault.ReportedAt.ToShortDateString()</th>
+                    <th>@fault.Status</th>
+                </tr>
+            }
+        </tbody>
+    </table>
