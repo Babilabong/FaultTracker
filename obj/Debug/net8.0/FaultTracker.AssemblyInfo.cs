@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FaultTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+320cd979f6d68dcb5bedbee0a0401779980f2ddc")]
 [assembly: System.Reflection.AssemblyProductAttribute("FaultTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FaultTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

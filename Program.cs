@@ -1,7 +1,15 @@
+using FaultTracker.Models;
+using FaultTracker.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+Console.WriteLine("Registering FaultService...");
+builder.Services.AddScoped<FaultService>();
 
 var app = builder.Build();
 

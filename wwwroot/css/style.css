@@ -1,0 +1,177 @@
+/* Reset בסיס */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f2f5, #dfe9f3);
+    color: #333;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* מיכל כללי */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: slideFade 0.8s ease-in-out;
+}
+
+/* כותרת */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #007acc;
+    position: relative;
+}
+h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: #007acc;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* טופס */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #007acc;
+    box-shadow: 0 0 5px rgba(0,122,204,0.4);
+    transform: scale(1.02);
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    background: linear-gradient(to right, #007acc, #00bcd4);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,188,212,0.3);
+}
+
+/* כפתור ניווט */
+a.button {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #28a745, #34d058);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a.button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+}
+
+/* טבלה */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeInTable 1s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead {
+    background: linear-gradient(to right, #007acc, #00bcd4);
+    color: white;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+table tbody tr {
+    background: #f9f9f9;
+    transition: background 0.3s ease;
+}
+
+table tbody tr:hover {
+    background: #e0f7fa;
+    transform: scale(1.01);
+}
+
+/* תגית סטטוס */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+.badge.open { background-color: #f44336; }
+.badge.investigating { background-color: #ff9800; }
+.badge.closed { background-color: #4caf50; }
+
+/* אנימציות */
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.85; }
+    100% { transform: scale(1); opacity: 1; }
+}

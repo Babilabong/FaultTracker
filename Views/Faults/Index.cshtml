@@ -1,28 +1,35 @@
 @model List<FaultTracker.Models.Fault>
-    <h2>Faults List</h2>
-    <a href="/Faults/Create">Add New Fault</a>
+@{
+    Layout = "_Layout";
+}
 
-    <table border="1">
+<div class="container">
+    <h2>📋 Faults List</h2>
+    <a class="button" href="/Faults/Create">➕ Add New Fault</a>
+
+    <table>
         <thead>
             <tr>
-                <th>Number</th>
+                <th>#</th>
                 <th>Title</th>
                 <th>Description</th>
                 <th>Date</th>
                 <th>Status</th>
             </tr>
         </thead>
-
         <tbody>
             @foreach (var fault in Model)
             {
                 <tr>
-                    <th>@fault.Id</th>
-                    <th>@fault.Title</th>
-                    <th>@fault.Description</th>
-                    <th>@fault.ReportedAt.ToShortDateString()</th>
-                    <th>@fault.Status</th>
+                    <td>@fault.Id</td>
+                    <td>@fault.Title</td>
+                    <td>@fault.Description</td>
+                    <td>@fault.ReportedAt.ToShortDateString()</td>
+                    <td>
+                        <span class="badge @(fault.Status.ToLower())">@fault.Status</span>
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
+</div>

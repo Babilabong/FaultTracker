@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MpjhlX57vydBB96EIbD78Nw/qSjAw9HtIb3a43/z49E=",
+  "Hash": "M1xbgwh6S/Nrs2RljRh1lkykN60NM26YeNAHFsaEL/w=",
   "Source": "FaultTracker",
   "BasePath": "_content/FaultTracker",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/babilabong/myDevelopment/FaultTracker/wwwroot/css/style.css",
+      "SourceId": "FaultTracker",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/babilabong/myDevelopment/FaultTracker/wwwroot/",
+      "BasePath": "_content/FaultTracker",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
       "Identity": "/Users/babilabong/myDevelopment/FaultTracker/wwwroot/favicon.ico",
